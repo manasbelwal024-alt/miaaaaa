@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Something For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Music starts only after the visitor presses the music button -->
+  <audio id="backgroundMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <button id="musicButton" class="music-button" onclick="toggleMusic()" aria-label="Toggle background music">
+    ♫ Play music
+  </button>
+
+  <section id="intro" class="section">
+    <span class="floating floating-one">♡</span>
+    <span class="floating floating-two">✦</span>
+    <div class="content">
+      <p class="eyebrow">A LITTLE SOMETHING, JUST FOR YOU </p>
+      <p class="eyebrow">AND IF YOU WANT MUSIC CLICK ON TOP RIGHT HEHEHEH </p>
+      <div class="big-heart">💗</div>
+      <h1>Hey, You.</h1>
+      <p class="sub">I made something special for you. Every little part comes straight from my heart.</p>
+      <button class="primary-button" onclick="goTo('gift')">Open your surprise ♡</button>
+    </div>
+  </section>
+
+  <section id="gift" class="section">
+    <div class="content">
+      <p class="eyebrow">A TINY PRESENT</p>
+      <h2>Something is waiting for you</h2>
+      <p class="sub">Tap the gift. I promise it's sweeter than it looks.</p>
+      <button class="gift" onclick="openGift()" aria-label="Open gift">🎁</button>
+      <p id="giftMessage" class="message" aria-live="polite"></p>
+      <button id="giftNext" class="primary-button hidden" onclick="goTo('roses')">Keep going ♡</button>
+    </div>
+  </section>
+
+  <section id="roses" class="section">
+    <div class="rose-glow"></div>
+    <div class="content">
+      <p class="eyebrow">FOR SOMEONE SPECIAL</p>
+      <h1>Sending You<br><i>All My Roses.</i></h1>
+      <p class="sub">If I could, I'd fill your whole world with flowers and little reminders of how wonderful you are.</p>
+      <button class="primary-button" onclick="goTo('gallery')">A few memories →</button>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="content wide">
+      <p class="eyebrow">LITTLE MOMENTS, BIG FEELINGS</p>
+      <h2>My Favourite Memories</h2>
+      <p class="sub">Put your own pictures in this folder and name them photo1.jpg to photo6.jpg.</p>
+      <div class="photos">
+        <figure class="photo"><img src="1today.jpg" alt="Memory one"><figcaption>That lovely day</figcaption></figure>
+        <figure class="photo"><img src="IMG_20261021_002020_534.jpg" alt="Memory two"><figcaption>Your smile</figcaption></figure>
+        <figure class="photo"><img src="hh4h.jpg" alt="Memory three"><figcaption>Just us</figcaption></figure>
+        <figure class="photo"><img src="Snapchat-1315952029.jpg" alt="Memory four"><figcaption>your eyes</figcaption></figure>
+        <figure class="photo"><img src="IMG_20261022_210255_050_1.jpg" alt="Memory five"><figcaption>One to remember</figcaption></figure>
+        <figure class="photo"><img src="IMG_20261021_002016_522.jpg" alt="Memory six"><figcaption>My favourite person</figcaption></figure>
+      </div>
+      <button class="primary-button" onclick="goTo('envelope')">I wrote you something… ♡</button>
+    </div>
+  </section>
+
+  <!-- Envelope reveal -->
+  <section id="envelope" class="section">
+    <div class="content">
+      <p class="eyebrow">A LETTER, SEALED WITH LOVE</p>
+      <h2>There's something I want you to read</h2>
+      <p class="sub">Tap the envelope to open it.</p>
+
+      <button id="envelopeButton" class="envelope-scene" onclick="openLetter()" aria-label="Open the letter">
+        <span class="letter-peek">♡</span>
+        <span class="envelope-back"></span>
+        <span class="envelope-front"></span>
+        <span class="envelope-flap"></span>
+        <span class="envelope-heart">♥</span>
+      </button>
+
+      <p id="envelopeHint" class="message">Made especially for you</p>
+      <button id="readLetterButton" class="primary-button hidden" onclick="goTo('letter')">Read my letter ♡</button>
+    </div>
+  </section>
+
+  <!-- Letter with staged reveal -->
+  <section id="letter" class="section">
+    <article class="paper" id="paper">
+      <p class="eyebrow centered">FROM MY HEART TO YOURS</p>
+      <h2>My Dearest,</h2>
+      <div class="letter-copy">
+        <p>I don't always know how to put my feelings into words, but today I wanted to try.</p>
+        <p>There is something about you that makes ordinary days feel a little more beautiful. Your smile, your laugh, the way you see the world — all these little things mean more to me than I can explain.we met very unexpectedly like on a random day without any connection ik i have said this hundres of time but with you 100 is just a number.</p>
+        <p>Thank you for being you. Thank you for the memories, the conversations, the silly moments, and even the quiet ones. I hope you know how appreciated you are.</p>
+        <p>yarr mia bolu ya dikshu i just want to say ki I can't promise that every day will be perfect, but I can promise that what I feel is real. I want to keep making memories with you, cheering for you, and reminding you that you matter. and id do anything for you like you were someone i thought i could never have i mean the type of girl i wanted caring ,sweet ,hot hehhehehe and like u are just perfect yar idk how or what should i say and how do i keep this in words but id say ki yar with you i see our future our happy family .</p>
+        <p>If this little website made you smile even for a second, then it did exactly what I hoped it would.</p>
+      </div>
+      <p class="signature">Yours, Mio hehehe manas ♡</p>
+      <button class="primary-button centered-button" onclick="goTo('question')">One last thing →</button>
+    </article>
+  </section>
+
+  <section id="question" class="section">
+    <div class="question-card">
+      <p class="eyebrow">ONE LAST QUESTION</p>
+      <h2>Will You Keep Being<br><i>My Favourite Person?</i> 💗</h2>
+      <p class="sub">No pressure… but I am secretly hoping you say yes.</p>
+      <div class="answers">
+        <button class="answer-button" onclick="answerYes()">Of course! 💕</button>
+        <button class="answer-button" id="noButton" onmouseenter="moveNoButton()">Let me think…</button>
+      </div>
+      <p id="answerMessage" class="answer-message" aria-live="polite"></p>
+      <p class="footer">Made with love, just for you ✨</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
